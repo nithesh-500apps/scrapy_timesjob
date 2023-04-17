@@ -34,22 +34,3 @@ class TimesjobSpider(scrapy.Spider):
         job_dict['job_url'] = response.request.url
         print(job_dict,"details")
         yield job_dict
-
-    # def parse_job(self, response):
-    #     print(response.text)
-    #     job_dict = {}
-    #     title = response.xpath("//div[@class='jd-header wht-shd-bx']/h1/text()").get()
-    #     job_dict['title'] = title
-    #     company = response.xpath("/div[@class='jd-header wht-shd-bx']/h2/text()").get()
-    #     job_dict['company'] = company
-    #     experience = response.xpath("(//ul[@class='top-jd-dtl clearfix']//li)[1]").get()
-    #     job_dict['experience'] = experience
-    #     package = response.xpath("(//ul[@class='top-jd-dtl clearfix']//li)[2]").get()
-    #     job_dict['package'] = package
-    #     location = response.xpath("//ul[@class='top-jd-dtl clearfix']//li)[3]").get()
-    #     job_dict['location'] = location
-    #     # job_description = response.xpath("//div[@class='styles__DescriptionTextFull-sc-1532ppx-9 hKWjyK']/div/p/text()").get()
-    #     # job_dict['job_description'] = job_description
-    #     job_dict['title'] = title.replace('"', "").strip()
-    #     job_dict['job_url'] = response.request.url
-    #     yield job_dict
